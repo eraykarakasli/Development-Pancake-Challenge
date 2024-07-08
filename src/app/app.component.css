@@ -1,0 +1,42 @@
+
+div {
+  margin: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Satırların arka plan rengi */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Yesil renkli pure palindrome satırları */
+td.is-pure-palindrome {
+  color: green;
+}
+
+/* Sarı renkli sadece palindrome satırları */
+td.is-palindrome {
+  color: rgb(255, 25, 0);
+}

@@ -1,0 +1,30 @@
+<div>
+  <h1>{{ title }}</h1>
+  
+  <form (submit)="onSubmit()">
+    <label for="userInput">Enter Text:</label>
+    <input type="text" id="userInput" name="userInput" [(ngModel)]="userInput" required>
+    <button type="submit">Check Palindrome</button>
+  </form>
+  
+  <table *ngIf="results.length > 0">
+    <thead>
+      <tr>
+        <th>Text</th>
+        <th>Is Pure Palindrome</th>
+        <th>Is Palindrome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of results">
+        <td>{{ result.text }}</td>
+        <td [style.color]="result.is_pure_palindrome ? 'green' : 'inherit'">
+          {{ result.is_pure_palindrome ? 'Yes' : 'No' }}
+        </td>
+        <td [style.color]="result.is_palindrome ? 'yellow' : 'inherit'">
+          {{ result.is_palindrome ? 'Yes' : 'No' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
